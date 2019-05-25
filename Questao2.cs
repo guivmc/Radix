@@ -1,7 +1,7 @@
 class Program
     {
 
-        static void RemoveDupicates( int[] vec )
+        static int RemoveDupicates( int[] vec )
         {
             List<int> fin = new List<int>();
            
@@ -12,7 +12,7 @@ class Program
                     fin.Add(vec[i]);
                 }
                 else
-                    Console.WriteLine( "Duplicado: {0}", vec[i]);
+                   return vec[i]);
             }
         }
 
@@ -20,7 +20,9 @@ class Program
         {
             int[] vec = { 1, 6, 3, 9, 45, 67, 98, 0, 3, 123 };
 
-            RemoveDupicates( vec );
+            int x = RemoveDupicates( vec );
+            
+            Console.WriteLine("Duplicado: {0}", x);
 
             Console.ReadLine();
         }
